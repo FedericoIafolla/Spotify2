@@ -49,7 +49,7 @@ function NavbarAside() {
         <aside className="col col-2">
             <nav className="navbar navbar-expand-md fixed-left justify-content-between" id="sidebar">
                 <div className="container flex-column align-items-start">
-                    <a className="navbar-brand" href="/">
+                    <a className="navbar-brand" href="index.html">
                         <img src={logo} alt="Spotify Logo" width="131" height="40" />
                     </a>
                     <div className="input-group mt-3">
@@ -80,20 +80,21 @@ function NavbarAside() {
                         <div className="navbar-nav">
                             <ul>
                                 <li>
-                                    <button
+                                    <a
                                         className="nav-item nav-link d-flex align-items-center"
-                                        onClick={() => { }}
+                                        href="#"
                                     >
                                         <i className="bi bi-house-door-fill"></i>&nbsp; Home
-                                    </button>
+                                    </a>
                                 </li>
                                 <li>
-                                    <button
+                                    <a
                                         className="nav-item nav-link d-flex align-items-center"
+                                        href="#"
                                         onClick={handleLibraryToggle}
                                     >
                                         <i className="bi bi-book-fill"></i>&nbsp; Your Library
-                                    </button>
+                                    </a>
                                     {isLibraryOpen && (
                                         <ul className="disliked-songs-list">
                                             {dislikedSongs.map(song => (
@@ -105,12 +106,13 @@ function NavbarAside() {
                                     )}
                                 </li>
                                 <li>
-                                    <button
+                                    <a
                                         className="nav-item nav-link d-flex align-items-center"
+                                        href="#"
                                         onClick={handleFavoritesToggle}
                                     >
                                         <i className="bi bi-star-fill"></i>&nbsp; Your Favorites
-                                    </button>
+                                    </a>
                                     {isFavoritesOpen && (
                                         <table className="table favorites-songs-list">
                                             <thead>
