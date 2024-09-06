@@ -1,0 +1,96 @@
+/* Imposta l'altezza del container del player a circa l'8% dell'altezza della finestra */
+.bg-container {
+  height: 8vh; /* Regola questo valore se vuoi un'altezza diversa */
+  background-color: #282828;
+  position: relative; /* Assicurati che il player sia posizionato in modo relativo */
+  width: 100%;
+  overflow: hidden; /* Evita che il contenuto esca dal container */
+}
+
+/* Assicurati che il player sia posizionato in basso */
+.row {
+  height: 100%; /* Usa l'altezza completa del container */
+}
+
+/* Stile per il contenitore dei dettagli della canzone */
+.song-details-container {
+  text-align: center;
+  padding-top: 5px; /* Spazio sopra il div dei dettagli della canzone */
+  color: white;
+  width: 100%; /* Assicurati che occupi tutta la larghezza del container */
+  margin-bottom: 10px; /* Spazio sotto il div dei dettagli della canzone */
+}
+
+/* Stile per i dettagli della canzone (nome artista e titolo) */
+.song-details {
+  font-size: 14px; /* Dimensione del font per il testo della canzone */
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Controlli del player */
+.playerControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra orizzontalmente i controlli del player */
+  justify-content: center;
+  width: 100%;
+  position: relative; /* Permette il posizionamento assoluto per l'icona SVG */
+}
+
+/* CSS per l'icona SVG */
+.like-icon {
+  width: 24px; /* Dimensione dell'icona */
+  position: absolute; /* Posizionamento assoluto per spostare l'icona senza influenzare le altre */
+  left: 0; /* Allinea l'icona a sinistra */
+  margin-left: 440px; /* Distanza dal bordo sinistro */
+  filter: brightness(0) invert(1); /* Cambia il colore dell'icona a bianco */
+  padding-bottom: 3rem;
+}
+
+/* Contenitore delle icone e della progress bar */
+.playerControls div {
+  display: flex;
+  justify-content: center; /* Centra orizzontalmente le icone del player */
+  align-items: center; /* Allinea verticalmente le icone */
+  width: 100%;
+  max-width: 600px; /* Limita la larghezza del contenuto del player */
+}
+
+.playerControls a img {
+  width: 24px; /* Regola la dimensione dei bottoni */
+  margin: 0 10px;
+  filter: brightness(60%);
+}
+
+.playerControls a:hover img {
+  filter: brightness(80%);
+}
+
+/* Progress bar */
+.progress {
+  background-color: #414141;
+  height: 3px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .playerControls div {
+    max-width: 800px; /* Aumenta la larghezza per schermi più grandi */
+  }
+}
+
+/* Player */
+.song-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.song-details {
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}

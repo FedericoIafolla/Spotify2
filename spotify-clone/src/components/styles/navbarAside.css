@@ -1,0 +1,185 @@
+/* src/components/styles/navbarAside.css */
+
+body {
+  background: rgb(46, 63, 87);
+  background: linear-gradient(
+    90deg,
+    rgb(63, 86, 119) 0%,
+    rgba(33, 44, 61, 1) 42%,
+    rgb(15, 21, 29) 100%
+  );
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.navbar.fixed-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: black;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.navbar.fixed-left .navbar-brand {
+  width: 100%;
+  padding-left: 10px;
+  margin-bottom: 40px;
+}
+
+.navbar.fixed-left .navbar-brand img {
+  width: 210px;
+  height: auto;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a {
+  color: rgb(145, 145, 145) !important;
+  transition: 0.3s;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a:hover {
+  color: white !important;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.navbar.fixed-left .input-group {
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 1rem;
+}
+
+.navbar.fixed-left .input-group .form-control {
+  border-radius: 10px 0 0 10px;
+}
+
+.navbar.fixed-left .input-group .input-group-append .btn {
+  border-radius: 0 10px 10px 0;
+}
+
+.nav-btn {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-btn .btn {
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+.nav-btn .links-container {
+  margin-top: 20px;
+}
+
+.nav-btn .links-container a {
+  color: rgb(145, 145, 145);
+  text-decoration: none;
+}
+
+.nav-btn .links-container a:hover {
+  color: white;
+}
+
+.nav-btn .links-container a:not(:last-child)::after {
+  content: " | ";
+  color: rgb(145, 145, 145);
+}
+
+.nav-link i {
+  font-size: 1.5em;
+}
+
+.signup-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.signup-btn:hover {
+  color: white;
+  background-color: rgb(60, 211, 60);
+  border: 1px solid rgb(60, 211, 60);
+}
+
+.login-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.login-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.nav-item.nav-link.btn-library {
+  background: none;
+  border: none;
+  color: rgb(145, 145, 145);
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.nav-item.nav-link.btn-library:hover {
+  color: white;
+}
+
+.library-card,
+.disliked-songs-list,
+.favorites-songs-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.library-card {
+  max-height: 300px;
+}
+
+.disliked-songs-list li,
+.favorites-songs-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.disliked-songs-list li:last-child,
+.favorites-songs-list li:last-child {
+  border-bottom: none;
+}
+
+.disliked-songs-list,
+.favorites-songs-list {
+  color: white;
+}
+
+@media screen and (max-width: 936px) {
+  .navbar.fixed-left {
+    display: none;
+  }
+}

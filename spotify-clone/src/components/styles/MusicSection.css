@@ -1,0 +1,86 @@
+/* Sezione principale */
+.main-section {
+  margin-left: 390px; /* Spazio per la navbar laterale */
+  padding-top: 20px;
+  padding-left: 4rem;
+  background-color: rgb(46, 63, 87);
+  min-height: 100vh; /* Assicura che la sezione principale occupi almeno l'altezza della finestra */
+  box-sizing: border-box; /* Assicura che il padding non influisca sulla larghezza */
+}
+
+/* Links in alto */
+.mainLinks {
+  display: flex;
+  justify-content: flex-start;
+  gap: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 4rem;
+  padding-left: 10rem;
+}
+
+.mainLinks a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.mainLinks a:hover {
+  text-decoration: underline;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+/* Sezioni */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  color: white;
+  margin-bottom: 3rem;
+}
+
+/* Album Container */
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rem; /* Spazio tra le copertine */
+}
+
+/* Album Item */
+.album-item {
+  text-align: center;
+  flex: 1 1 calc(25% - 5px); /* Aggiornato per occupare il 25% dello spazio disponibile meno il gap */
+  max-width: 320px; /* Aumentato per le copertine più grandi */
+}
+
+/* Immagini delle copertine */
+.album-item img {
+  width: 100%;
+  max-width: 320px; /* Grandezza delle copertine aumentata */
+  height: auto; /* Mantiene le proporzioni delle immagini */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.album-item p {
+  color: white;
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
+
+/* Aggiungi queste regole al tuo CSS per le icone */
+.icon-button {
+  background: transparent; /* Sfondo trasparente */
+  border: none; /* Rimuove il bordo */
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  color: white; /* Colore dell'icona */
+  font-size: 2rem; /* Dimensione delle icone (puoi aumentare o diminuire secondo necessità) */
+}
+
+.icon-button:focus {
+  outline: none; /* Rimuove il contorno al focus */
+}
