@@ -1,8 +1,8 @@
 import React from 'react';
 import NavbarAside from './components/NavbarAside';
-import MusicSectionMain from './components/MusicSection'; // Importa il nuovo componente
-import Player from './components/Player'; // Importa il componente Player
-import './App.css'; // Per il CSS personalizzato
+import MusicSectionMain from './components/MusicSection';
+import Player from './components/Player';
+import './App.css';
 
 function App() {
   return (

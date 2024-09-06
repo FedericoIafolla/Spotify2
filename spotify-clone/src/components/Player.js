@@ -9,14 +9,14 @@ import playImg from '../assets/playerbuttons/play.png';
 import nextImg from '../assets/playerbuttons/next.png';
 import repeatImg from '../assets/playerbuttons/repeat.png';
 import likeSvg from '../assets/playerbuttons/like.svg'; // Importa l'icona SVG
-import dislikeSvg from '../assets/playerbuttons/dislike.svg'; // Importa l'icona dislike
+import dislikeSvg from '../assets/playerbuttons/dislike.svg';
 
 const Player = () => {
     const dispatch = useDispatch();
     const currentSong = useSelector(state => state.song.currentSong);
     const likedSongs = useSelector(state => state.song.likedSongs);
 
-    const [liked, setLiked] = React.useState(false); // Stato per gestire l'icona
+    const [liked, setLiked] = React.useState(false);
 
     React.useEffect(() => {
         if (currentSong) {

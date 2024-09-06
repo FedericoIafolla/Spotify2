@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleLike, selectSong } from '../redux/actions';
-import { FaPlayCircle, FaPauseCircle } from 'react-icons/fa'; // Importa le icone
+import { FaPlayCircle, FaPauseCircle } from 'react-icons/fa';
 import './styles/MusicSection.css';
 
 const MusicSection = () => {
     const [rockSongs, setRockSongs] = useState([]);
     const [popSongs, setPopSongs] = useState([]);
     const [hipHopSongs, setHipHopSongs] = useState([]);
-    const [playingSongId, setPlayingSongId] = useState(null); // Stato per la canzone in riproduzione
+    const [playingSongId, setPlayingSongId] = useState(null);
 
     const dispatch = useDispatch();
     const likedSongs = useSelector(state => state.song.likedSongs);
@@ -50,10 +50,10 @@ const MusicSection = () => {
 
     const handlePlayPause = (song) => {
         if (playingSongId === song.id) {
-            setPlayingSongId(null); // Se la canzone è già in riproduzione, mettila in pausa
+            setPlayingSongId(null);
         } else {
-            setPlayingSongId(song.id); // Altrimenti, riproduci la nuova canzone
-            dispatch(selectSong(song)); // Imposta la canzone nel Redux store
+            setPlayingSongId(song.id);
+            dispatch(selectSong(song));
         }
     };
 

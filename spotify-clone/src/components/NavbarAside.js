@@ -1,4 +1,3 @@
-// src/components/NavbarAside.js
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createPlaylist, addSongToPlaylist } from '../redux/actions';
@@ -50,7 +49,7 @@ function NavbarAside() {
         <aside className="col col-2">
             <nav className="navbar navbar-expand-md fixed-left justify-content-between" id="sidebar">
                 <div className="container flex-column align-items-start">
-                    <a className="navbar-brand" href="index.html">
+                    <a className="navbar-brand" href="/">
                         <img src={logo} alt="Spotify Logo" width="131" height="40" />
                     </a>
                     <div className="input-group mt-3">
@@ -61,9 +60,7 @@ function NavbarAside() {
                             aria-label="Search"
                         />
                         <div className="input-group-append">
-                            <button
-                                className="btn btn-outline-secondary btn-sm h-100"
-                            >
+                            <button className="btn btn-outline-secondary btn-sm h-100">
                                 GO
                             </button>
                         </div>
@@ -83,21 +80,20 @@ function NavbarAside() {
                         <div className="navbar-nav">
                             <ul>
                                 <li>
-                                    <a
+                                    <button
                                         className="nav-item nav-link d-flex align-items-center"
-                                        href="#"
+                                        onClick={() => { }}
                                     >
                                         <i className="bi bi-house-door-fill"></i>&nbsp; Home
-                                    </a>
+                                    </button>
                                 </li>
                                 <li>
-                                    <a
+                                    <button
                                         className="nav-item nav-link d-flex align-items-center"
-                                        href="#"
                                         onClick={handleLibraryToggle}
                                     >
                                         <i className="bi bi-book-fill"></i>&nbsp; Your Library
-                                    </a>
+                                    </button>
                                     {isLibraryOpen && (
                                         <ul className="disliked-songs-list">
                                             {dislikedSongs.map(song => (
@@ -109,21 +105,29 @@ function NavbarAside() {
                                     )}
                                 </li>
                                 <li>
-                                    <a
+                                    <button
                                         className="nav-item nav-link d-flex align-items-center"
-                                        href="#"
                                         onClick={handleFavoritesToggle}
                                     >
                                         <i className="bi bi-star-fill"></i>&nbsp; Your Favorites
-                                    </a>
+                                    </button>
                                     {isFavoritesOpen && (
-                                        <ul className="favorites-songs-list">
-                                            {likedSongs.map(song => (
-                                                <li key={song.id}>
-                                                    {song.title} - {song.artist.name}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <table className="table favorites-songs-list">
+                                            <thead>
+                                                <tr>
+                                                    <th>Title</th>
+                                                    <th>Artist</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {likedSongs.map(song => (
+                                                    <tr key={song.id}>
+                                                        <td>{song.title}</td>
+                                                        <td>{song.artist.name}</td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
                                     )}
                                 </li>
                             </ul>

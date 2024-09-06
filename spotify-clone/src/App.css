@@ -37,9 +37,6 @@
   }
 }
 
-/* src/components/styles/app.css */
-
-/* GENERAL STYLES */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -53,9 +50,8 @@ body {
   );
 }
 
-/* PLAYER STYLES */
 .bg-container {
-  height: 7vh; /* Altezza del player */
+  height: 7vh;
   background-color: #282828;
   position: fixed;
   bottom: 0;

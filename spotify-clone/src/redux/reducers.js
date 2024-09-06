@@ -1,12 +1,11 @@
-// src/redux/reducers.js
 import { SELECT_SONG, TOGGLE_LIKE, ADD_SONG, SET_SEARCH_RESULTS, CREATE_PLAYLIST, ADD_SONG_TO_PLAYLIST } from './actions';
 
 const initialState = {
     currentSong: null,
     likedSongs: [],
     allSongs: [],
-    searchResults: [], // Aggiungi questo stato per i risultati di ricerca
-    playlists: {} // Aggiungi questo stato per le playlist
+    searchResults: [],
+    playlists: {}
 };
 
 const songReducer = (state = initialState, action) => {
@@ -39,7 +38,7 @@ const songReducer = (state = initialState, action) => {
                 ...state,
                 playlists: {
                     ...state.playlists,
-                    [action.payload]: [] // Crea una playlist vuota
+                    [action.payload]: []
                 }
             };
         case ADD_SONG_TO_PLAYLIST:
@@ -48,7 +47,7 @@ const songReducer = (state = initialState, action) => {
                 ...state,
                 playlists: {
                     ...state.playlists,
-                    [playlistName]: [...(state.playlists[playlistName] || []), song] // Aggiungi la canzone alla playlist
+                    [playlistName]: [...(state.playlists[playlistName] || []), song]
                 }
             };
         default:

@@ -1,4 +1,3 @@
-// src/redux/actions.js
 export const SELECT_SONG = 'SELECT_SONG';
 export const TOGGLE_LIKE = 'TOGGLE_LIKE';
 export const ADD_SONG = 'ADD_SONG';
